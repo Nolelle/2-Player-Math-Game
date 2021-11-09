@@ -1,0 +1,45 @@
+Tasks
+
+Task 1
+Read the description above again and extract / write down the nouns that you feel could make for important entities (manifested in the form of classes) 
+to contain (encapsulate) logic as part of this app.
+
+Classes
+- Player
+- Questions
+- Game
+
+Modules
+
+Task 2
+Write out a brief paragraph describing the role that class will play in your app.
+
+Remember that objects are important for two things:
+
+State: Storing data describing themselves (variables)
+Behavior: Defining actions that can be performed on them (methods)
+
+Write down the methods for each class while also speaking to the following points:
+
+What information is relevant to each class?
+What will they need in order to be initialized?
+What public methods will be defined on them?
+
+Furthermore:
+
+Which class will contain the game loop (where each instance of the loop is the other players turn)?
+Which class should manage who the current_player is?
+Which class(es) will contain user I/O and which will not have any?
+
+Classes
+- Game
+  -State: score, winner, end of game
+  -Behavior: ask random question, prompt each each player with a question, keep track of score, declare winner
+
+- Player
+  -State: answer 
+  -Behavior: give answers
+
+- Questions
+  -State: questions
+  -Behavior: randomize question

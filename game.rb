@@ -33,8 +33,8 @@ class Game
       end
 
       puts "P1: #{self.p1.lives}/3 vs P2: #{self.p2.lives}/3"
-      puts '---------- NEW TURN ----------'
       break if self.p1.lives == 0
+      puts '---------- NEW TURN ----------'
 
       self.current_player = 2
       print "Player #{self.current_player}: "
@@ -48,8 +48,8 @@ class Game
         puts "Player #{self.current_player}: Seriously? No!"
       end
       puts "P1: #{p1.lives}/3 vs P2: #{p2.lives}/3"
-      puts '---------- NEW TURN ----------'
       break if self.p2.lives == 0
+      puts '---------- NEW TURN ----------'
     end
 
     #game over

@@ -8,8 +8,8 @@ class Game
   end
 
   def generate_a_question
-    @num1 = rand (1...10)
-    @num2 = rand (1...10)
+    @num1 = rand (1...10_000)
+    @num2 = rand (1...10_000)
     puts "What does #{self.num1} plus #{self.num2} equal?"
   end
 
@@ -26,13 +26,13 @@ class Game
       print '> '
       answer = gets.chomp
       if self.check_answer(answer.to_i)
-        puts "Player#{self.current_player}: YES! You are correct."
+        puts "Player #{self.current_player}: YES! You are correct."
       else
         self.p1.lives -= 1
         puts "Player #{self.current_player}: Seriously? No!"
       end
 
-      puts "P1: #{self.p1.lives}/3 vs P@: #{self.p2.lives}/3"
+      puts "P1: #{self.p1.lives}/3 vs P2: #{self.p2.lives}/3"
       puts '---------- NEW TURN ----------'
       break if self.p1.lives == 0
 
@@ -47,7 +47,7 @@ class Game
         self.p2.lives -= 1
         puts "Player #{self.current_player}: Seriously? No!"
       end
-      puts "P1: #{p1.lives}/3 vs P@: #{p2.lives}/3"
+      puts "P1: #{p1.lives}/3 vs P2: #{p2.lives}/3"
       puts '---------- NEW TURN ----------'
       break if self.p2.lives == 0
     end

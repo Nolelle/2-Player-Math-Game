@@ -1,0 +1,9 @@
+Classes
+- Game
+  -State: player1, player2, number1, number2, current_player
+  -Behavior: generate a question, check the players answer to the question, host the game
+
+- Player
+  -State: lives start at 3
+  -Behavior: decrement lives 
+
